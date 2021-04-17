@@ -22,3 +22,13 @@ Route.group(() => {
   Route.post('login', 'AuthController.login')
 
 }).prefix('api/auth')
+
+
+Route.group(() => {
+
+  Route.get('all', 'CategoryController.all')
+  Route.post('add', 'CategoryController.add')
+  Route.patch('edit/:category', 'CategoryController.edit').bind('Category')
+  Route.delete('delete/:category', 'CategoryController.delete').bind('Category')
+
+}).prefix('api/category')
