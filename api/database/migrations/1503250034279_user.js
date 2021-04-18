@@ -3,8 +3,8 @@
 /** @type {import('@adonisjs/lucid/src/Schema')} */
 const Schema = use('Schema')
 
-const ADMIN = 1
-const USER =  0
+const ADMIN = 'ADMIN'
+const USER =  'USER'
 
 class UserSchema extends Schema {
   up () {
