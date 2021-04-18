@@ -21,7 +21,7 @@ class InitAppSeeder {
     const admin = await Factory.model('App/Models/User').create({
       email: 'Arcoders@gmail.com',
       username: 'Ismael Haytam',
-      role: 1
+      role: 'ADMIN'
     })
 
     // Categories

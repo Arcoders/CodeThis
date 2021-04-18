@@ -27,8 +27,8 @@ Route.group(() => {
 Route.group(() => {
 
   Route.get('all', 'CategoryController.all')
-  Route.post('add', 'CategoryController.add')
-  Route.patch('edit/:category', 'CategoryController.edit').bind('Category')
+  Route.post('add', 'CategoryController.add').validator('Category')
+  Route.patch('edit/:category', 'CategoryController.edit').bind('Category').validator('Category')
   Route.delete('delete/:category', 'CategoryController.delete').bind('Category')
 
-}).prefix('api/category')
+}).prefix('api/category').middleware(['auth', 'admin'])
